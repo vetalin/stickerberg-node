@@ -19,10 +19,14 @@ const Parser = require('./parser')
 //   commodity_type: 'physical'
 // })
 
-const getParse = async () => {
-  const parseResult = await Parser.parse("https://tlgrm.ru/stickers/Baphomethessa")
-  console.log({parseResult})
-  return parseResult
+const TelegramGrabber = {
+  createFromList (list) {
+    const http = 'https://tlgrm.ru/stickers/'
+  }
 }
 
-getParse()
+const getParse = async () => {
+  return await Parser.parse("https://tlgrm.ru/stickers/AdventureStickers")
+}
+
+const listToParse = []
