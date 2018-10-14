@@ -1,8 +1,7 @@
 const Products = {
   async create (Moltin, product = {}) {
     try {
-      const result = await Moltin.Products.Create(product)
-      console.log({result})
+      await Moltin.Products.Create(product)
     } catch (err) {
       console.error(err)
     }

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/vetalin/stickerberg-node#readme",
   "dependencies": {
-    "@moltin/sdk": "^3.15.2"
+    "@moltin/sdk": "^3.15.2",
+    "jsdom": "^12.2.0",
+    "request-promise": "^4.2.2"
   }
 }
