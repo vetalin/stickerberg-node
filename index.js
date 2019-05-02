@@ -1,23 +1,6 @@
-const Moltin = require('./login')
 const Products = require('./products')
+const Firebase = require('./login')
 const Parser = require('./parser')
-
-// Products.create(Moltin, {
-//   name: 'Deck Shoe',
-//   slug: 'deck-shoe',
-//   sku: 'deck-shoe-001',
-//   description: 'A product for testing purposes',
-//   manage_stock: true,
-//   price: [
-//     {
-//       amount: 5891,
-//       currency: 'USD',
-//       includes_tax: true
-//     }
-//   ],
-//   status: 'live',
-//   commodity_type: 'physical'
-// })
 
 const TelegramGrabber = {
   createFromList (list) {
@@ -30,3 +13,17 @@ const getParse = async () => {
 }
 
 const listToParse = []
+
+
+const productsPaste = async () => {
+  await Products.create(Firebase, {
+    productTitle: 'test',
+    productName: 'test',
+    productImage: 'test',
+    productId: 'test',
+    productBody: 'test',
+    productDescription: 'test'
+  })
+}
+productsPaste()
+

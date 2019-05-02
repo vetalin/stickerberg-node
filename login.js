@@ -1,9 +1,14 @@
-const MoltinGateway = require('@moltin/sdk').gateway
+const firebase = require('firebase')
 
-const Moltin = MoltinGateway({
-  client_id: '6wHgaOUzFcrXG5tRbn0RVGSBYGy1Uwb5o28CC08CWG',
-  client_secret: 'MoW3ERBp8r7h4fCIn1Pfr0PJZto6374FVSwltXkAP0'
-})
+let config = {
+  apiKey: "AIzaSyAIqM9ggP9VTXg9RjDjeG6x57A6RzF5TCg",
+  authDomain: "stickerberg.firebaseapp.com",
+  databaseURL: "https://stickerberg.firebaseio.com",
+  projectId: "stickerberg",
+  storageBucket: "stickerberg.appspot.com",
+  messagingSenderId: "403773816795"
+}
+firebase.initializeApp(config)
 console.log('done connect!')
 
-module.exports = Moltin
+module.exports = firebase
